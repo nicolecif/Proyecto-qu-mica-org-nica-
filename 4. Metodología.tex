@@ -1,0 +1,29 @@
+
+\subsection{Recolección de datos}
+
+Se realizó la recopilación de información fisicoquímica y de reactividad de diez hidrocarburos, correspondientes a cinco alcanos y cinco alquenos, mediante la plataforma CAS SciFinder. Para cada compuesto se registraron propiedades como peso molecular, punto de fusión, punto de ebullición, densidad, pKa, momento dipolar, solubilidad en agua y presión de vapor.
+
+Adicionalmente, se recopilaron diez reacciones y diez rutas de obtención por compuesto, incluyendo el número de identificación CAS de la reacción, reactivos, productos, catalizadores, solventes, temperatura, medio y tipo de reacción.
+
+La información obtenida se almacenó inicialmente en un archivo Excel, denominado base de datos cruda, conservando los valores y las descripciones reportadas en las fuentes consultadas.
+
+\subsection{Limpieza y organización de datos}
+
+A partir de la base de datos cruda, se realizó un proceso de depuración y organización mediante Python, utilizando principalmente las bibliotecas \texttt{pandas} y \texttt{numpy}.
+
+Este procedimiento comprendió la unificación de las tablas de propiedades, reacciones y obtenciones; la estandarización de nombres y categorías; la conversión de unidades de medida y la identificación de valores faltantes o no numéricos.
+
+Asimismo, se clasificaron los registros según el tipo de reacción, el medio químico y el grupo funcional de las sustancias relacionadas, conservando la información original para mantener la trazabilidad de los datos.
+
+Como resultado, se obtuvo el archivo \texttt{compuestos\_limpio.xlsx}, constituido por 210 registros organizados: diez correspondientes a las propiedades de los compuestos principales y 200 asociados a reacciones y rutas de obtención.
+
+\subsection{Análisis y representación gráfica}
+
+Una vez organizada la base de datos, se desarrolló un análisis descriptivo y gráfico mediante Python, empleando bibliotecas como \texttt{pandas}, \texttt{matplotlib} y \texttt{seaborn}.
+
+Se calcularon frecuencias y distribuciones de los diferentes tipos de reacción, medios químicos y condiciones de temperatura. También se analizaron las propiedades fisicoquímicas y sus relaciones con las características de las sustancias estudiadas.
+
+Los resultados se representaron mediante diagramas de barras, mapas de calor, gráficos de dispersión y diagramas de distribución, según la naturaleza de las variables analizadas.
+
+Finalmente, las representaciones gráficas se exportaron en formatos PNG y PDF para su incorporación al informe, permitiendo identificar y discutir las principales tendencias presentes en los datos recopilados.
+

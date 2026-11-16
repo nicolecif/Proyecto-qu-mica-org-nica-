@@ -1,0 +1,63 @@
+\subsection{Cobertura de la muestra y consistencia documental}
+Los diez compuestos previstos están representados; para cada uno se conservan diez reacciones y diez obtenciones. Los 200 registros de reactividad contienen 195 identificadores \emph{CAS Reaction Number} distintos; por consiguiente, cinco apariciones exceden el número de identificadores únicos. La coincidencia de un identificador entre registros no se consideró evidencia suficiente para borrar filas, pues puede corresponder a una misma reacción descrita desde diferentes compuestos o roles.
+
+Se verificó la correspondencia de los campos descriptivos preservados entre los libros crudo y limpio sin detectar diferencias textuales críticas. De 200 registros de reactividad, 170 (85,0\%) disponen de una temperatura numérica en la tabla organizada y 30 no. De los 200 valores textuales de temperatura, 141 pudieron cotejarse mediante una regla sencilla; los otros 59 corresponden a descripciones con información contextual que la regla de cotejo no reproduce de manera unívoca; 29 de ellas contienen también una cifra en el archivo limpio. Esta cifra de 141 no representa necesariamente el total de temperaturas experimentalmente inequívocas: indica el alcance de la verificación automatizada aplicada.
+
+
+\begin{table}[!htbp]
+\centering
+\caption{Estructura y verificaciones de la base.}\label{tab:auditoria}
+\footnotesize
+\begin{tabularx}{\columnwidth}{@{}Xr@{}}
+\toprule
+Indicador & Resultado \\
+\midrule
+Compuestos base & 10 \\
+Registros de reacción / obtención & 100 / 100 \\
+Identificadores CAS diferentes & 195 \\
+Temperaturas numéricas & 170 (85,0\%) \\
+Temperaturas cotejadas mediante regla simple & 141 \\
+Conversiones numéricas verificadas & 1.060 \\
+Celdas no comprobables automáticamente & 620 \\
+\bottomrule
+\end{tabularx}
+\par\vspace{2pt}
+{\scriptsize La auditoría consideró ocho propiedades en las 210 filas.}
+\end{table}
+
+
+\subsection{Frecuencias de las clases de reacción}
+En las categorías normalizadas, la clase con mayor frecuencia fue \textbf{oxidación}, con 35 registros (17,5\% del total), seguida de hidrogenación (26; 13,0\%), reducción (22; 11,0\%), eliminación (20; 10,0\%) y adición (18; 9,0\%). Las cinco categorías acumulan 121 registros (60,5\%). El desglose por rol muestra una distribución desigual: 34 de las 35 observaciones de oxidación aparecen en registros rotulados como reacciones, mientras que las 26 de hidrogenación figuran como obtenciones. Estas cifras describen el diseño del conjunto de registros recopilados, sin demostrar que dichas rutas sean dominantes en la química de los compuestos estudiados.
+
+\input{tablas/reacciones}
+\figproy{01_tipos_reaccion}{0.93}{Distribución de registros por clase normalizada y rol del hidrocarburo. Las frecuencias corresponden a categorías obtenidas mediante clasificación textual; no representan una identificación independiente de mecanismos.}{fig:tipos}
+
+El mapa de calor de la Figura~\ref{fig:mapa} facilita identificar las clases presentes entre los veinte registros seleccionados para cada compuesto. Como se fijó la misma cantidad de reacciones y obtenciones para las diez sustancias, esta figura se interpreta como distribución interna de la muestra, no como comparación de productividad, probabilidad de reacción o amplitud real de las rutas conocidas.
+\figancha{02_mapa_tipos_compuesto}{1.00}{Frecuencia de clases de reacción por compuesto. Cada fila agrupa diez reacciones y diez obtenciones.}{fig:mapa}
+
+\subsection{Medios reportados y condiciones de temperatura}
+La categoría de medio más frecuente fue \textbf{neutro}, con 77 registros (38,5\%). El grupo «otro / no determinado» comprendió 55 registros (27,5\%), seguido de ácido (46; 23,0\%), apolar (12; 6,0\%) y básico (10; 5,0\%). La prevalencia del medio clasificado como neutro debe interpretarse junto con el alto porcentaje de información no determinada y con el procedimiento heurístico de codificación.
+
+\input{tablas/medios}
+\figproy{03_medios_reaccion}{0.91}{Medios clasificados según el texto de las fichas, diferenciando reacciones y obtenciones.}{fig:medios}
+
+Entre los 170 registros con temperaturas numéricas, la mediana de la temperatura central de acuerdo con la Ec.~\eqref{eq:temperatura} fue \textbf{100~$^\circ$C}. El valor también se mantiene al tomar exclusivamente los 141 registros de temperatura que coincidieron con una regla de cotejo simple. Sin embargo, 29 de los 170 registros numéricos no pudieron contrastarse automáticamente mediante esa regla; en ellos puede haber varias etapas, cambios de temperatura o anotaciones operativas. La Figura~\ref{fig:temp} resume las temperaturas centrales por clase, mostrando tamaños de muestra diferentes y, cuando corresponde, intervalos de observaciones.
+\figancha{04_temperatura_tipos}{0.98}{Distribución de temperaturas centrales, calculadas a partir de límites numéricos. No son temperaturas óptimas ni necesariamente constantes; algunas descripciones originales son multietapa.}{fig:temp}
+
+\subsection{Propiedades de los compuestos base}
+La Tabla~\ref{tab:compuestos} presenta los valores de masa molecular, punto de fusión y punto de ebullición contenidos en las diez fichas iniciales. Se reproducen los datos tal como aparecen en el libro limpio; estos valores deben interpretarse según la fase y las condiciones en que se reportaron.
+
+\input{tablas/compuestos}
+\figproy{05_masa_ebullicion_compuestos}{0.82}{Relación descriptiva entre masa molecular y punto de ebullición de los diez hidrocarburos originales. Cada punto representa una sustancia, no un registro de reacción.}{fig:ebullicion}
+
+Dentro del subconjunto de alcanos, el punto de ebullición tabulado aumenta desde el metano ($-161{,}4~^\circ$C) hasta el butano ($-0{,}5~^\circ$C) en la serie de cadenas no ramificadas. Entre los isómeros butano e isobutano se observa una diferencia de 11,2~$^\circ$C, a pesar de compartir masa molecular (58,12~g/mol). La Figura~\ref{fig:ebullicion} representa estas comparaciones, pero sugiere una relación descriptiva y no una estimación causal.
+
+\subsection{Disponibilidad de propiedades de sustancias relacionadas}
+Las ocho propiedades de las sustancias relacionadas no tienen la misma proporción de registros numéricamente utilizables. La más disponible es la masa molecular (178/200; 89,0\%), mientras que pKa (93/200; 46,5\%) y solubilidad en agua (95/200; 47,5\%) tienen coberturas menores. Estas diferencias condicionan la interpretación de cualquier visualización multivariable. En particular, las propiedades expresadas en unidades homogéneas pueden seguir siendo incompatibles si proceden de fases o condiciones de medida distintas.
+
+\input{tablas/cobertura}
+\figancha{08_disponibilidad_datos}{0.92}{Disponibilidad numérica de las propiedades fisicoquímicas por rol del registro. Las celdas sin valor no deben sustituirse por cero.}{fig:disponibilidad}
+
+\subsection{Frecuencias de participantes en las fichas}
+Se contaron las menciones de catalizadores y solventes que aparecen separadas mediante punto y coma en el registro. El resultado refleja \emph{menciones en fichas} y no el número de experimentos independientes ni de especies químicas inequívocamente identificadas: un registro puede incluir varios participantes y una misma sustancia puede aparecer con variantes de nombre. La Figura~\ref{fig:participantes} se interpreta como un recuento documental de menciones, no como una comparación de prevalencia experimental entre catalizadores o solventes.
+\figancha{11_catalizadores_solventes}{0.98}{Catalizadores y solventes más mencionados en el conjunto documental. Una ficha puede contener varias menciones.}{fig:participantes}
