@@ -1,1 +1,1 @@
-# Proyecto-qu-mica-org-nica-
+# Proyecto-quimica organica
