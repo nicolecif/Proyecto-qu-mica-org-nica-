@@ -1,0 +1,79 @@
+\usepackage[T1]{fontenc}
+\usepackage[utf8]{inputenc}
+\usepackage[spanish,es-tabla]{babel}
+\usepackage{float}
+%\usepackage{parskip}                             % Ajusta los saltos de párrafo, eliminando sangrías y agregando espacio entre párrafos.
+\usepackage{lipsum}                              %Sirve pa' llenar la hoja de texto random
+\usepackage{multicol}                           %Sirve para hacer división de columnas 
+\usepackage{tasks}
+\usepackage{xcolor}
+\usepackage{titling}
+\usepackage{verbatim}
+\usepackage{charter}
+\usepackage{amsmath}
+\usepackage{appendix}
+\usepackage{amsthm}
+\usepackage{ragged2e}
+\usepackage{array}
+\usepackage{etoolbox}
+\usepackage{fancyhdr}
+\usepackage{booktabs}
+\usepackage{arydshln}
+\usepackage{caption}
+\usepackage{subcaption}
+\usepackage{enumitem}
+\usepackage{geometry}
+\geometry{
+  top=0.8in,            
+  inner=0.5in,
+  outer=0.5in,
+  bottom=0.9in,        
+}
+% removed legacy enumerate; enumitem is used instead
+\usepackage{graphicx}
+\usepackage{mathtools}
+\usepackage{multirow}
+\usepackage{pdfpages}
+\usepackage{subfiles}
+\usepackage[compact]{titlesec}
+\usepackage{stfloats}
+
+
+% Paquetes adicionales imprescindibles para reproducir los resultados.
+\usepackage{threeparttable}
+\usepackage{tabularx}
+\usepackage{microtype}
+\usepackage{siunitx}
+\usepackage{needspace}
+\usepackage{placeins}
+\usepackage{xurl}
+\usepackage{hyperref}
+\usepackage{lastpage}
+\usepackage{adjustbox}
+\usepackage{ragged2e}
+\hypersetup{colorlinks=true,linkcolor=black,urlcolor=blueM,citecolor=blueM,
+  pdftitle={Análisis fisicoquímico y reactividad de diez hidrocarburos},
+  pdfauthor={Nicole Stephany Cifuentes Pardo; Maria Valentina Patiño Cadena; Valeria Florez Daza; Zoreidy Taliana Rodríguez Garay; Danna Marcela Moreno Suárez}}
+\captionsetup{font=footnotesize,labelfont=bf,skip=4pt}
+\setlength{\parindent}{1em}
+\setlength{\parskip}{0pt}
+\setlength{\emergencystretch}{2em}
+\newcommand{\figproy}[4]{%
+  \begin{figure}[!htbp]
+  \centering
+  \includegraphics[width=#2\columnwidth]{figuras/pdf/#1.pdf}
+  \caption{#3}
+  \label{#4}
+  \end{figure}}
+\newcommand{\figancha}[4]{%
+  \begin{figure*}[!t]
+  \centering
+  \includegraphics[width=#2\textwidth,height=.39\textheight,keepaspectratio]{figuras/pdf/#1.pdf}
+  \caption{#3}
+  \label{#4}
+  \end{figure*}}
+
+% Evitar duplicar el titulo Referencias al invocar thebibliography despues de \section.
+\makeatletter
+\patchcmd{\thebibliography}{\section*{\refname}}{}{}{}
+\makeatother
